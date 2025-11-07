@@ -1,0 +1,75 @@
+/* Resets */
+* { box-sizing: border-box; }
+html, body, #root { height: 100%; }
+body {
+  margin: 0;
+  font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji";
+  color: #0f172a;
+  background: #f8fafc;
+  line-height: 1.6;
+}
+
+/* Layout */
+.container { width: min(1100px, 92%); margin: 0 auto; }
+.section { padding: 64px 0; }
+.section-title { margin: 0 0 16px; font-size: 28px; letter-spacing: -0.02em; }
+.section-text, .section-subtitle { color: #475569; max-width: 70ch; }
+
+/* Buttons */
+.btn { display: inline-flex; align-items: center; justify-content: center; gap: 8px; padding: 10px 16px; border-radius: 10px; font-weight: 600; text-decoration: none; cursor: pointer; transition: all .2s ease; }
+.btn-primary { background: #2563eb; color: #fff; }
+.btn-primary:hover { background: #1e40af; }
+.btn-outline { border: 1px solid #cbd5e1; color: #0f172a; background: #fff; }
+.btn-outline:hover { border-color: #64748b; background: #f8fafc; }
+.btn-ghost { background: transparent; color: #0f172a; border: 1px solid transparent; }
+.btn-ghost:hover { background: #f1f5f9; border-color: #e2e8f0; }
+
+/* Navbar */
+.navbar { position: sticky; top: 0; z-index: 50; background: rgba(255,255,255,.8); backdrop-filter: blur(10px); border-bottom: 1px solid #e2e8f0; }
+.nav-content { display: flex; align-items: center; justify-content: space-between; padding: 12px 0; }
+.brand { font-weight: 800; font-size: 18px; color: #0f172a; text-decoration: none; letter-spacing: -0.02em; }
+.nav-links { display: none; gap: 14px; }
+.nav-links a { color: #0f172a; text-decoration: none; padding: 8px 10px; border-radius: 8px; }
+.nav-links a:hover { background: #f1f5f9; }
+
+/* Hero */
+.hero { padding: 80px 0 48px; background: linear-gradient(180deg, #ffffff, #f8fafc); }
+.eyebrow { text-transform: uppercase; letter-spacing: .12em; font-weight: 700; color: #2563eb; font-size: 12px; margin: 0 0 10px; }
+.hero-title { font-size: clamp(28px, 4vw, 40px); letter-spacing: -0.03em; margin: 0 0 10px; }
+.hero-tagline { color: #475569; margin: 0 0 24px; }
+.hero-cta { display: flex; gap: 10px; flex-wrap: wrap; }
+
+/* Skills */
+.skills-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px; padding: 0; list-style: none; }
+.skill-card { background: #fff; border: 1px solid #e2e8f0; padding: 12px 14px; border-radius: 10px; box-shadow: 0 1px 0 0 rgba(15,23,42,0.04); }
+
+/* Projects */
+.projects-grid { display: grid; grid-template-columns: 1fr; gap: 16px; }
+.project-card { background: #fff; border: 1px solid #e2e8f0; padding: 16px; border-radius: 12px; box-shadow: 0 1px 0 0 rgba(15,23,42,0.04); }
+.project-title { margin: 0 0 8px; font-size: 20px; }
+.project-desc { margin: 0 0 12px; color: #475569; }
+
+/* Education timeline */
+.timeline { list-style: none; padding: 0; margin: 0; display: grid; gap: 12px; }
+.timeline-item { position: relative; padding-left: 16px; }
+.timeline-item::before { content: ''; position: absolute; left: 6px; top: 8px; width: 6px; height: 6px; background: #2563eb; border-radius: 999px; }
+.timeline-content { background: #fff; border: 1px solid #e2e8f0; padding: 12px 14px; border-radius: 10px; box-shadow: 0 1px 0 0 rgba(15,23,42,0.04); }
+
+/* Contact */
+.contact-grid { display: grid; grid-template-columns: 1fr; gap: 12px; }
+.contact-card { display: block; background: #fff; border: 1px solid #e2e8f0; padding: 14px; border-radius: 10px; text-decoration: none; color: inherit; }
+.contact-card:hover { border-color: #94a3b8; background: #f8fafc; }
+.contact-label { display: block; font-size: 12px; color: #64748b; text-transform: uppercase; letter-spacing: .08em; }
+.contact-value { font-weight: 700; }
+
+/* Footer */
+.footer { border-top: 1px solid #e2e8f0; padding: 24px 0; background: #ffffff; margin-top: 32px; }
+.footer p { margin: 0; color: #64748b; }
+
+/* Responsive */
+@media (min-width: 720px) {
+  .nav-links { display: flex; }
+  .skills-grid { grid-template-columns: repeat(4, 1fr); }
+  .projects-grid { grid-template-columns: repeat(2, 1fr); }
+  .contact-grid { grid-template-columns: repeat(2, 1fr); }
+}
